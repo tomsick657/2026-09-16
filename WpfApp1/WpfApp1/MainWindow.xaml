@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+<Window x:Class="WpfApp1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,15 +9,20 @@
     <Grid>
         <Label Content="Hello World" HorizontalAlignment="Left" Margin="203,75,0,0" VerticalAlignment="Top" Width="214"/>
         <Label Content="視窗程式設計很好玩" HorizontalAlignment="Left" Margin="409,73,0,0" VerticalAlignment="Top" Width="214" Height="26"/>
+
         <Label Content="姓名" HorizontalAlignment="Left" Margin="214,161,0,0" VerticalAlignment="Top" Width="34" Height="26" Foreground="Red"/>
         <TextBox x:Name="nameTexBox" HorizontalAlignment="Left" Margin="250,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Label Content="電話" HorizontalAlignment="Left" Margin="210,202,0,0" VerticalAlignment="Top" Width="32" Height="26" Foreground="Red" RenderTransformOrigin="0.344,1.068"/>
+
+        <Label Content="電話" HorizontalAlignment="Left" Margin="210,202,0,0" VerticalAlignment="Top" Width="32" Height="26" Foreground="Red"/>
         <TextBox x:Name="telTextBox" HorizontalAlignment="Left" Margin="251,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-        <!-- 新增 Click 事件處理名稱 -->
-        <Button x:Name="okButton" Content="確認" HorizontalAlignment="Left" Margin="452,173,0,0" VerticalAlignment="Top" Height="35" Width="66" Click="okButton_Click"/>
+        <!-- 九九乘法表按鈕 -->
+        <Button x:Name="okButton" Content="乘法表" HorizontalAlignment="Left" Margin="662,252,0,0" VerticalAlignment="Top" Height="30" Width="66" Click="okButton_Click"/>
 
-        <!-- 修正語法錯誤：x:Name，並增加多行顯示與滾動條 -->
-        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="120" Margin="190,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Consolas"/>
+        <!-- 新增：蒐集資訊按鈕 -->
+        <Button x:Name="infoButton" Content="蒐集資訊" HorizontalAlignment="Left" Margin="480,173,0,0" VerticalAlignment="Top" Height="30" Width="66" Click="infoButton_Click"/>
+
+        <!-- 顯示九九乘法表的文字框 -->
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="120" Margin="249,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Consolas"/>
     </Grid>
 </Window>
