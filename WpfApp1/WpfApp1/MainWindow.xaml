@@ -5,24 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="week01" Height="450" Width="800" Background="#FFF5EFDB">
+        Title="week01" Height="500" Width="800" Background="#FFF5EFDB">
     <Grid>
-        <Label Content="Hello World" HorizontalAlignment="Left" Margin="203,75,0,0" VerticalAlignment="Top" Width="214"/>
-        <Label Content="視窗程式設計很好玩" HorizontalAlignment="Left" Margin="409,73,0,0" VerticalAlignment="Top" Width="214" Height="26"/>
+        <!-- 標籤 -->
+        <Label Content="Hello World" HorizontalAlignment="Left" Margin="203,30,0,0" VerticalAlignment="Top" Width="214"/>
+        <Label Content="視窗程式設計很好玩" HorizontalAlignment="Left" Margin="409,28,0,0" VerticalAlignment="Top" Width="214" Height="26"/>
 
-        <Label Content="姓名" HorizontalAlignment="Left" Margin="214,161,0,0" VerticalAlignment="Top" Width="34" Height="26" Foreground="Red"/>
-        <TextBox x:Name="nameTexBox" HorizontalAlignment="Left" Margin="250,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <!-- 姓名與電話區域 -->
+        <Label Content="姓名" HorizontalAlignment="Left" Margin="214,80,0,0" VerticalAlignment="Top" Width="34" Height="26" Foreground="Red"/>
+        <TextBox x:Name="nameTexBox" HorizontalAlignment="Left" Margin="250,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
 
-        <Label Content="電話" HorizontalAlignment="Left" Margin="210,202,0,0" VerticalAlignment="Top" Width="32" Height="26" Foreground="Red"/>
-        <TextBox x:Name="telTextBox" HorizontalAlignment="Left" Margin="251,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="電話" HorizontalAlignment="Left" Margin="208,120,0,0" VerticalAlignment="Top" Width="34" Height="26" Foreground="Red"/>
+        <TextBox x:Name="telTextBox" HorizontalAlignment="Left" Margin="251,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-        <!-- 九九乘法表按鈕 -->
-        <Button x:Name="okButton" Content="乘法表" HorizontalAlignment="Left" Margin="662,252,0,0" VerticalAlignment="Top" Height="30" Width="66" Click="okButton_Click"/>
+        <!-- x 輸入框 (可選填) -->
+        <Label Content="輸入被乘數:" HorizontalAlignment="Left" Margin="160,165,0,0" VerticalAlignment="Top" Foreground="Blue"/>
+        <TextBox x:Name="xTextBox" HorizontalAlignment="Left" Margin="251,168,0,0" VerticalAlignment="Top" Width="120" Text=""/>
 
-        <!-- 新增：蒐集資訊按鈕 -->
-        <Button x:Name="infoButton" Content="蒐集資訊" HorizontalAlignment="Left" Margin="480,173,0,0" VerticalAlignment="Top" Height="30" Width="66" Click="infoButton_Click"/>
+        <!-- 合併後唯一的乘法表按鈕 -->
+        <Button x:Name="okButton" Content="產生乘法表" HorizontalAlignment="Left" Margin="420,156,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="okButton_Click"/>
 
-        <!-- 顯示九九乘法表的文字框 -->
-        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="120" Margin="249,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Consolas"/>
+        <!-- 蒐集資訊按鈕 -->
+        <Button x:Name="infoButton" Content="蒐集資訊" HorizontalAlignment="Left" Margin="429,96,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="infoButton_Click"/>
+
+        <!-- 結果顯示框 -->
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="180" Margin="211,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Consolas"/>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="556,196,0,0" TextWrapping="Wrap" Text="顯示成果" VerticalAlignment="Top" Width="55" TextChanged="TextBox_TextChanged"/>
     </Grid>
 </Window>
